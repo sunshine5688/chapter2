@@ -15,7 +15,7 @@ public class Chapter2Application {
     public static void main(String[] args) {
         SpringApplication.run(Chapter2Application.class,args);
     }
-
+    @RequestMapping("/index/{value}")
     public ModelAndView index(ModelAndView mav, @PathVariable("value") String value){
         mav.getModelMap().addAttribute("key",value);
         mav.setViewName("index");
